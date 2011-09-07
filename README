@@ -1,1 +1,25 @@
-funkJS coming very soon
+funkjs
+
+A sweet selection of JavaScript funky function extensions that let you do all sorts of nice things when coding JavaScript.
+
+funk.chain
+~~~~~~~~~~
+
+  Chain many functions together
+
+
+  Example uses:
+
+    Do something after a method has been called:
+
+    obj.doSomething = funk.chain(obj.doSomething, function(){ 
+      /* do something else after */ 
+    });
+  
+  
+    Do something before a method has been called:
+  
+    obj.doSomething = funk.chain(function(){ 
+      /* do something before */ 
+    }, obj.doSomething);
+
