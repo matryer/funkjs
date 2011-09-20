@@ -4,3 +4,17 @@ funkjs
 A sweet selection of JavaScript funky function extensions that let you do all sorts of nice things when coding JavaScript.
 
 For a list of capabilities, check out the tests: https://github.com/matryer/funkjs/tree/master/test/tests
+
+---
+
+funk.bind - Binds context (this) and arguments to a function
+funk.block - Blocks a function to prevent it from doing anything
+funk.chain - Chains two or more functions together
+funk.clean - Removes all funky magic from a function (i.e. reverts it back to before any funk operations)
+funk.times - Returns a function that calls the original function a specific number of times
+funk.track - Keeps track of all calls to the function (great for testing)
+
+
+And some internal stuff:
+
+funk.functions - Gathers all functions from arguments and arrays

@@ -83,6 +83,20 @@ funk.chain = function(){
 /*
 	funk.times
 	Creates a new function that calls another function many times
+	
+	var f = function(){ alert("Hi") };
+ 	f = f.times(3);
+	
+	f();
+	
+	// alerts "Hi" x 3
+	
+	f = f.clean();
+	
+	f();
+	
+	// alerts "Hi" once
+	
 */
 funk.times = function(f, times) {
 	
@@ -185,6 +199,11 @@ Function.prototype.bind = function(){
 
 /*
 	funk.track
+	Tracks all calls to the function (great for testing)
+	
+	var f = function(){ [do something] }
+	f = funk.track(f)
+	
 */
 funk.track = function(func) {
 	
@@ -226,6 +245,19 @@ Function.prototype.track = function() {
 
 /*
 	funk.block
+	Blocks execution of a function
+	
+	var f = function(){ alert("Not blocked!") };
+	f = func.block(f);
+	
+	f();
+	// does nothing
+	
+	f = func.clean();
+	
+	f();
+	// alerts "Not blocked!"
+	
 */
 funk.block = function(func) {
 	
@@ -249,6 +281,10 @@ Function.prototype.block = function(){
 
 /*
 	funk.clean
+	Cleans a function by removing any funky behaviour
+	i.e. reverts back to the original function before any funk. operations
+	     were used
+	
 */
 funk.clean = function(func) {
 	
@@ -266,7 +302,21 @@ Function.prototype.clean = function(){
 	return funk.clean.call(funk, this);
 };
 
-
+/*
+	funk.cache
+	Caches the response of a function so that expensive operations
+	don't get repeated unnecessarily
+	
+	var f = function(){ return [something expensive]; };
+	f = f.cache();
+	
+	var first = f();
+	// calls the function to generate the output
+	
+	var second = f();
+	// returns the element from the cache
+	
+*/
 
 
 
